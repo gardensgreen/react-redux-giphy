@@ -4,6 +4,7 @@ import React from 'react';
 const GifsList = () => (
   // TODO: Render a `<div>` as the parent element of your `GifsList` component.
   // TODO: Map over your `urls` array to render an `<img>` for each `url`.
+    <></>
 );
 
 export default GifsList;
