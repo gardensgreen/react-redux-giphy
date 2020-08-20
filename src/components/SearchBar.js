@@ -1,17 +1,31 @@
 import React from "react";
 
 class SearchBar extends React.Component {
-  // TODO: Set a default `inputValue` state.
+  constructor(props) {
+    super(props);
+    this.state = {
+      inputValue: '',
+    };
+  }
 
-  // TODO: Create an`onChange` handler for your input value.
+  updateInputVal = e => {
+    this.setState({ inputValue: e.target.value });
+  }
 
-  // TODO: Create an`onSubmit` handler for your search form.
+  // TODO: Create an `onSubmit` handler for your search form.
     // TODO: Prevent the default action of a submit event
     // TODO: Dispatch the `fetchGifs` function
-
+  
   render() {
     return (
-      // TODO: Render a form with a controlled text input as its only child.
+      <form onSubmit={this.handleSubmit}>
+        <input
+          type="text"
+          value={this.state.inputValue}
+          onChange={this.updateInputVal}
+          placeholder="Search for a GIF!"
+        />
+      </form>
     );
   }
 };
